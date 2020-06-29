@@ -1,9 +1,11 @@
 class Board
+    attr_accessor :board_array
+
     def initialize(board_array)
-        puts display_board(board_array)
+      @board_array = board_array
     end
     
-    def display_board(board_array)
+    def display_board
       <<~MYHEREDOC
         #{board_array[0]}
         #{board_array[1]}
@@ -19,4 +21,4 @@ class Board
 end
 
 board = Board.new(Array.new(8) { Array.new(8) { " " } })
-
+puts board.display_board
