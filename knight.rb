@@ -1,12 +1,8 @@
 class Knight
-    attr_reader :value
+    attr_reader :square
   
-    def initialize(value)
-      @value = value
-      @adjacent_nodes = []
+    def initialize
+      @square = square
     end
     
-    def add_edge(adjacent_node)
-      @adjacent_nodes << adjacent_node
-    end
 end
