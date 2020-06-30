@@ -1,16 +1,16 @@
 class Board
   
-    def initialize
-      @nodes = {}
+    def initialize(board_array = [])
+    p  @board = create_board(board_array = [])
     end
     
-    def add_node(node)
-      @nodes[node.value] = node
+    def create_board(board_array = [])
+      square = Knight.new
+      # Create an array that holds coordinates in a  8 x 8 grid
     end
-    
-    def add_edge(node1, node2)
-      @nodes[node1].add_edge(@nodes[node2])
-      @nodes[node2].add_edge(@nodes[node1])
+
+    def create_rows
+
     end
     
 end
