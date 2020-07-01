@@ -1,11 +1,13 @@
 class Knight
-    attr_accessor :row, :column
+    attr_accessor :row_start, :column_start, :row_end, :column_end
     def initialize
-        @row = row
-        @column = column
+        @row_start = row_start
+        @column_start = column_start
+        @row_end = row_end
+        @column_end = column_end
     end
     
-    def knight_moves(row, column)
+    def knight_moves([row_start, column_start], [row_end, column_end])
     end
     
 end
