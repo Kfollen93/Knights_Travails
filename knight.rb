@@ -1,8 +1,8 @@
 class Knight
-    attr_reader :square
-  
+    attr_accessor :row, :column
     def initialize
-      @square = square
+        @row = row
+        @column = column
     end
     
     def knight_moves(row, column)
