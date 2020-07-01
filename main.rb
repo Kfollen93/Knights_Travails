@@ -1,6 +1,6 @@
 require_relative 'board.rb'
 require_relative 'knight.rb'
 
-board = Board.new
+p board = Board.new
 board_array = Array.new(8) { Array.new(8)}
-p board.board_with_coordinates(board_array) #for user to visualize
+board.board_with_coordinates(board_array) # for user to visualize
