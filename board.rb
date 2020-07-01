@@ -12,6 +12,7 @@ class Board
   end
 
   def populate_board
+    # or this could be a method for where the knight is able to move (everywhere)
     # knight = Knight.new 
   end
 
