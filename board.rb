@@ -8,7 +8,7 @@ class Board
   end
 
   def create_board
-    Array.new(8) { Array.new(8) }
+    Array.new(8) { Array.new(8) { knight = Knight.new } }
   end
 
   def board_with_coordinates(board_array)
