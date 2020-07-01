@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Creates 8x8 grid
 class Board
   attr_accessor :board
   def initialize
