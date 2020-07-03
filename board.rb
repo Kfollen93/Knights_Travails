@@ -2,18 +2,20 @@
 
 # Creates 8x8 grid
 class Board
-  attr_accessor :board
+  attr_accessor :board_array
   def initialize
-    @board = create_board
+    @board_array = create_board
+    populate_board
   end
 
   def create_board
-    Array.new(8) { Array.new(8) }
+    Array.new(64)
   end
 
   def populate_board
-    # or this could be a method for where the knight is able to move (everywhere)
-    # knight = Knight.new 
+    board_array.each_with_index do |n, index|
+      board_array[index] = Vertex.new
+    end
   end
 
   def board_with_coordinates(board_array)
