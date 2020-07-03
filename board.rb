@@ -8,14 +8,14 @@ class Board
     @letters = ["A", "B", "C", "D", "E", "F", "G", "H"]
     @numbers = ["1", "2", "3", "4", "5", "6", "7", "8"]
     create_board
-    assign_coordinates
+    coordinates
   end
 
   def create_board
-    Array.new(64){ Vertex.new }
+    Array.new(64){ Vertex.new } # one array, with 64 elements
   end
 
-  def assign_coordinates
+  def coordinates
     letters.product(numbers).zip(board_array) do |array_cords, vert|
     vert.coordinates = array_cords.join
     end
