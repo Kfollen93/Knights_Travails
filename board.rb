@@ -8,14 +8,17 @@ class Board
     @letters = ("a".."h").to_a
     @numbers = ("1".."8").to_a
     create_board
+    assign_coordinates
   end
 
   def create_board
-    Array.new(64) { Vertex.new}
+    Array.new(64){ Vertex.new }
   end
 
   def assign_coordinates
-
+    letters.product(numbers).zip(board_array) do |array_coordinates, vertex|
+    vertex.coordinates = array_coordinates.join
+    end
   end
 
 =begin  def board_with_coordinates(board_array)
