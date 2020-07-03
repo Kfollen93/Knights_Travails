@@ -1,10 +1,8 @@
 class Vertex
-    attr_accessor :key, :edge, :square, :x, :y, :coordinates
+    attr_accessor :key, :edge, :square, :coordinates
     def initialize
         @square = square
         @edge = edge
-        @x = x
-        @y = y
         @coordinates = coordinates
     end
 end
