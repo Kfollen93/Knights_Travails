@@ -1,7 +1,10 @@
 class Vertex
+    attr_accessor :key, :edge, :square, :x, :y, :coordinates
     def initialize
-        @adjacent_nodes = []
+        @square = square
         @edge = edge
-        @next_node = next_node
+        @x = x
+        @y = y
+        @coordinates = coordinates
     end
 end
