@@ -4,15 +4,14 @@
 class Board
   attr_accessor :board_array, :letters, :numbers
   def initialize
-    @board_array = create_board
+    @board_array = Array.new(64){ Vertex.new } # one array, with 64 elements
     @letters = ["A", "B", "C", "D", "E", "F", "G", "H"]
     @numbers = ["1", "2", "3", "4", "5", "6", "7", "8"]
-    create_board
     coordinates
   end
 
-  def create_board
-    Array.new(64){ Vertex.new } # one array, with 64 elements
+  def access_board # place holder
+    puts "I am first Array #{board_array[0]}"
   end
 
   def coordinates
