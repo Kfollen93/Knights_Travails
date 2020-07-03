@@ -5,8 +5,8 @@ class Board
   attr_accessor :board_array, :letters, :numbers
   def initialize
     @board_array = create_board
-    @letters = ("a".."h").to_a
-    @numbers = ("1".."8").to_a
+    @letters = ["A", "B", "C", "D", "E", "F", "G", "H"]
+    @numbers = ["1", "2", "3", "4", "5", "6", "7", "8"]
     create_board
     assign_coordinates
   end
@@ -16,8 +16,8 @@ class Board
   end
 
   def assign_coordinates
-    letters.product(numbers).zip(board_array) do |array_coordinates, vertex|
-    vertex.coordinates = array_coordinates.join
+    letters.product(numbers).zip(board_array) do |array_cords, vertex|
+    vertex.coordinates = array_cords.join
     end
   end
 
