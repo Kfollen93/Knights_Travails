@@ -5,10 +5,9 @@ class Knight
         @column_start = column_start
         @row_end = row_end
         @column_end = column_end
-        @adjacent_nodes = []
     end
     
-    def knight_moves([row_start, column_start], [row_end, column_end])
+    def knight_moves
     end
     
 end
