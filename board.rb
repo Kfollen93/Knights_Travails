@@ -16,8 +16,8 @@ class Board
   end
 
   def assign_coordinates
-    letters.product(numbers).zip(board_array) do |array_cords, vertex|
-    vertex.coordinates = array_cords.join
+    letters.product(numbers).zip(board_array) do |array_cords, vert|
+    vert.coordinates = array_cords.join
     end
   end
 
