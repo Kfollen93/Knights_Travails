@@ -2,7 +2,7 @@
 
 # Creates 8x8 grid
 class Board
-  attr_accessor :board_array, :letters, :numbers
+  attr_accessor :board_array
   def initialize
     @board_array = Array.new(8) { Array.new(8) { Vertex.new } }
   end
