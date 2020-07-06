@@ -17,6 +17,8 @@ class Knight
 
     x = [2, 1, -1, -2, -2, -1, 1, 2]
     y = [1, 2, 2, 1, -1, -2, -2, -1]
+    # find condition for each position where Knight moving is restricted
+    # if knight's position is [0][0] (first array, first element)
 
     end
     
