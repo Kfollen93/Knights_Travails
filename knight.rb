@@ -6,8 +6,12 @@ class Knight
         @row_end = row_end
         @column_end = column_end
     end
+
+    def knight_possible_moves
+        
+    end
     
-    def knight_moves
+    def move_knight
     end
     
 end
