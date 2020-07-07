@@ -1,15 +1,12 @@
 class Knight
-    attr_accessor :row_start, :column_start, :row_end, :column_end, :x, :y, :KNIGHT_MOVES
+    attr_accessor :x, :y, :KNIGHT_MOVES, :location
     def initialize
-        @row_start = row_start
-        @column_start = column_start
-        @row_end = row_end
-        @column_end = column_end
         @x = x
         @y = y
         @KNIGHT_MOVES =
          [[2, 1], [1, 2], [-1, 2], [-2, 1],
          [-2, -1], [-1, -2], [1, -2], [2, -1]]
+        @location = location
     end
 
     def knight_possible_moves
@@ -32,7 +29,8 @@ class Knight
     # if a Knight starts in the 7th array (last) && 0th element, it CANT MOVE:
         # (-1, 2); (-1, -2); (-2, -1); (-2, 1); (1, -2); (2, -1)
 
-    KNIGHT_MOVES
+    x = location[0]
+    y = location[1]
     
 
 
