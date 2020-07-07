@@ -3,6 +3,8 @@
 # Creates 8x8 grid
 class Board
   attr_accessor :board_array
+  MAX = 7
+  
   def initialize
     @board_array = Array.new(8) { Array.new(8) { Vertex.new } }
   end
