@@ -1,21 +1,19 @@
 class Knight
-    attr_accessor :x, :y
-
-    @KNIGHT_MOVES = [[2, 1], [1, 2], [-1, 2], [-2, 1],
+    KNIGHT_MOVES = [[2, 1], [1, 2], [-1, 2], [-2, 1],
     [-2, -1], [-1, -2], [1, -2], [2, -1]]
 
-    def initialize(location)
-        @x = location[0]
-        @y = location[1]
+    def valid_moves(location)
+    p    possible_moves(location).select { |move| move[0].between?(0, Board::MAX) && move[1].between?(0, Board::MAX) }
     end
 
-    def knight_possible_moves
+     private
+
+    def possible_moves(location)
+    x = location[0]
+    y = location[1]
     moves = []
     KNIGHT_MOVES.each { |move| moves << [x + move[0], y + move[1]] }
-   p moves
+    moves
     end
-    
-    def move_knight
-    end
-    
+     
 end
