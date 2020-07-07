@@ -4,13 +4,9 @@
 class Board
   attr_accessor :board_array
   MAX = 7
-  
+
   def initialize
     @board_array = Array.new(8) { Array.new(8) { Vertex.new } }
-  end
-
-  def access_board # place holder
-    puts "I am  Array element #{board_array[1][0]}"
   end
 
   def board_with_coordinates(board_array)
