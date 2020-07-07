@@ -8,7 +8,7 @@ class Board
   end
 
   def access_board # place holder
-    puts "I am first Array element #{board_array[0][0]}"
+    puts "I am  Array element #{board_array[1][0]}"
   end
 
   def board_with_coordinates(board_array)
