@@ -6,4 +6,4 @@ require_relative 'vertex.rb'
 p board = Board.new
 board_array = Array.new(8) { Array.new(8) { Vertex.new } }
 knight = Knight.new
-print knight.valid_moves([7,7])
+print knight.valid_moves([0,0])
