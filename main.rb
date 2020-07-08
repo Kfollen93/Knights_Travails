@@ -8,4 +8,6 @@ board_array = Array.new(8) { Array.new(8) { Vertex.new } }
 # board.board_with_coordinates(board_array) # for user to visualize
 # board.access_board
 knight = Knight.new
-knight.valid_moves([0,3])
+print knight.possible_moves([0,3])
+puts ""
+print knight.valid_moves([0,3])
