@@ -7,6 +7,8 @@ class Board
 
   def initialize
     @board_array = Array.new(8) { Array.new(8) { Vertex.new } }
+    @letters = ["A", "B", "C", "D", "E", "F", "G", "H"]
+    @numbers = ["1", "2", "3", "4", "5", "6", "7", "8"]
   end
 
   def board_with_coordinates(board_array)
@@ -18,3 +20,8 @@ class Board
   end
 
 end
+
+
+# map coordinates by letter/number to each vertex
+
+# find out how to map the A1, B1, etc coordinates to the 8x8 array
