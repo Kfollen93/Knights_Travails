@@ -3,6 +3,7 @@
 # Creates 8x8 grid
 class Board
   attr_accessor :board_array
+  attr_reader :letters, :numbers
   MAX = 7
 
   def initialize
@@ -19,9 +20,16 @@ class Board
     end
   end
 
+  def board_coordinates
+    letters.product(numbers).zip(board_array) do |x, y|
+      key = x.join # need to figure how to set each @key equal to one coordinate.
+      end
+  end
+
+
 end
 
+# first assign all keys their letter/num coordinates
+# then iterate through each key and map valid_moves function to it to assign each of them their values
+# output as a hash
 
-# map coordinates by letter/number to each vertex
-
-# find out how to map the A1, B1, etc coordinates to the 8x8 array
