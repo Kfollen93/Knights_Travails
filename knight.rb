@@ -17,5 +17,11 @@ class Knight
   end
 
   def hash_of_valid_moves
+    hash_moves =  {}
   end
 end
+
+
+
+# first assign all keys their letter/num coordinates
+# then iterate through each key and map valid_moves function to it to assign each of them their values
