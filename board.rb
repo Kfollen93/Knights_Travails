@@ -12,17 +12,9 @@ class Board
     @numbers = ["1", "2", "3", "4", "5", "6", "7", "8"]
   end
 
-  def board_with_coordinates(board_array)
-    board_array.each_with_index.map do |row, row_index|
-      row.each_with_index.map do |column, column_index|
-        [row_index, column_index]
-      end
-    end
-  end
-
   def board_coordinates
-    letters.product(numbers).zip(board_array) do |x, y|
-      key = x.join # need to figure how to set each @key equal to one coordinate.
+    letters.product(numbers).zip(board_array) do |cords, _|
+      cords.join # need to figure how to set each @key equal to one coordinate.
       end
   end
 
