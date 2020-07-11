@@ -20,9 +20,3 @@ class Knight
     hash_moves =  {}
   end
 end
-
-
-
-# first assign all keys their letter/num coordinates
-# then iterate through each key and map valid_moves function to it to assign each of them their values
-# output as a hash
