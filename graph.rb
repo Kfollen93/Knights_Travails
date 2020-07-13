@@ -1,5 +1,4 @@
 class Graph
-    def add_edge
-        
+    def adj_hash
     end
 end
