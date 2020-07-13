@@ -15,8 +15,4 @@ class Knight
     KNIGHT_MOVES.each { |move| moves << [x + move[0], y + move[1]] }
     moves
   end
-
-  def hash_of_valid_moves
-    hash_moves =  {}
-  end
 end

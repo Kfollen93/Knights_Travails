@@ -11,10 +11,4 @@ class Board
   def initialize
     @board_array = Array.new(8) { Array.new(8) { Vertex.new } }
   end
-
 end
-
-# first assign all keys their letter/num coordinates
-# then iterate through each key and map valid_moves function to it to assign each of them their values
-# output as a hash
-
