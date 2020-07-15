@@ -1,4 +1,5 @@
-class Graph < Knight
+class Graph
+    include Knight
 
 def hash_moves 
     adj_hash = {}
