@@ -10,11 +10,11 @@ class Graph
     @vertex_list = Array.new(8) { |i| Array.new(8) { |j| Vertex.new(i, j) } }
   end
 
-  def adj_list
+  def show_adj_list
     adj_list.each { |k, v| puts "#{k} => #{v}" }
   end
 
-  def vertices
+  def show_vertices
     vertex_list.each { |vertex| puts vertex }
   end
 
