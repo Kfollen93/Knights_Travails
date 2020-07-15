@@ -12,10 +12,10 @@ class Board
   end
 
   def display_vertices
-    graph.show_vertices
+    graph.vertices
   end
 
   def display_adj_list
-    graph.show_adj_list
+    graph.adj_list
   end
 end
