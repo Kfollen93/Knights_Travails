@@ -1,14 +1,21 @@
 # frozen_string_literal: true
-
+require_relative 'graph'
+require_relative 'vertex'
 # Creates 8x8 grid
 class Board
-  attr_accessor :board_array, :LETTERS, :NUMBERS
+  attr_accessor :graph
 
-  LETTERS = ["A", "B", "C", "D", "E", "F", "G", "H"]
-  NUMBERS = ["1", "2", "3", "4", "5", "6", "7", "8"]
   MAX = 7
 
   def initialize
-    @board_array = Array.new(8) { Array.new(8) { Vertex.new } }
+    @graph = Graph.new
+  end
+
+  def display_vertices
+    graph.show_vertices
+  end
+
+  def display_adj_list
+    graph.show_adj_list
   end
 end

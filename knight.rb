@@ -17,3 +17,4 @@ module Knight
     moves
   end
 end
+

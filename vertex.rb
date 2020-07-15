@@ -1,10 +1,13 @@
 class Vertex
-    attr_accessor :key, :edge, :value, :coordinates
+    attr_accessor :coordinates
 
-    def initialize
-        @edge = edge
-        @key = key
-        @value = value
-        @coordinates = coordinates
+    BOARD_SIZE = 8
+
+    def initialize(x, y)
+        @coordinates = [x, y]
     end
+
+    def to_s
+    (coordinates[0] + 97).chr + (BOARD_SIZE - coordinates[1]).to_s
+  end
 end
