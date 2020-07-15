@@ -1,4 +1,4 @@
-class Graph
+class Graph < Knight
 
 def hash_moves 
     adj_hash = {}
