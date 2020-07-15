@@ -4,7 +4,7 @@ require_relative 'graph.rb'
 require_relative 'vertex.rb'
 
 board_array = Array.new(8) { Array.new(8) { Vertex.new } }
-p board = Board.new
+board = Board.new
 knight = Knight.new
-knight.valid_moves([0,0])
-
+graph = Graph.new
+print graph.hash_moves
