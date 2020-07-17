@@ -18,10 +18,10 @@ class Graph
     vertex_list.each { |vertex| puts vertex }
   end
 
-  def hash_moves 
-      adj_hash = {}
-      (0..7).to_a.repeated_permutation(2).to_a.each { |k| adj_hash[k] = valid_moves(k) }
-      adj_hash
+  def hash_moves
+    adj_hash = {}
+    (0..7).to_a.repeated_permutation(2).to_a.each { |k| adj_hash[k] = valid_moves(k) }
+    adj_hash
   end
 
   def traverse_graph(starting_node)
@@ -32,8 +32,7 @@ class Graph
 
     until queue.empty?
       current = queue.shift
-      adj_hash[currrent].each { |vertex| queue << vertex }
+      adj_hash[current].each { |vertex| queue << vertex }
     end
   end
-    
 end
