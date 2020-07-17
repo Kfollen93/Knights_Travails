@@ -19,8 +19,8 @@ class Board
     graph.show_adj_list
   end
 
-  def display_bfs_graph(starting_node)
-    graph.traverse_graph(starting_node)
+  def display_bfs_graph(starting_node, target_node)
+    graph.traverse_graph(starting_node, target_node)
   end
 
 end
