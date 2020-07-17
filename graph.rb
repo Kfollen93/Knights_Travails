@@ -24,7 +24,7 @@ class Graph
     adj_hash
   end
 
-  def traverse_graph(starting_node)
+  def traverse_graph(starting_node = [3,4])
     queue = []
     visited = []
     queue << starting_node
@@ -32,7 +32,13 @@ class Graph
 
     until queue.empty?
       current = queue.shift
-      adj_hash[current].each { |vertex| queue << vertex }
+      adj_list[current].each do |vertex|
+        unless visited.include?(vertex)
+          queue << vertex
+          visited << vertex
+        end
+      end
+      print visited
     end
   end
 end
