@@ -18,4 +18,9 @@ class Board
   def display_adj_list
     graph.show_adj_list
   end
+
+  def display_bfs_graph
+    graph.traverse_graph
+  end
+
 end
