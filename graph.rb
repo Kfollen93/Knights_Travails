@@ -24,7 +24,7 @@ class Graph
     adj_hash
   end
 
-  def traverse_graph(starting_node = [3,4])
+  def traverse_graph(starting_node)
     queue = []
     visited = []
     queue << starting_node
@@ -38,7 +38,7 @@ class Graph
           visited << vertex
         end
       end
-      print visited
     end
+    print visited
   end
 end
