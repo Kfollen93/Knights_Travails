@@ -5,7 +5,6 @@ class Vertex
 
     def initialize(x, y)
         @coordinates = [x, y]
-        @visited = []
     end
 
     def to_s
