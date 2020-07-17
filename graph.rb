@@ -3,12 +3,11 @@ require_relative 'knight'
 class Graph
   include Knight
 
-  attr_reader :adj_list, :vertex_list, :queue
+  attr_reader :adj_list, :vertex_list
 
   def initialize
     @adj_list = hash_moves
     @vertex_list = Array.new(8) { |i| Array.new(8) { |j| Vertex.new(i, j) } }
-    @queue = Queue.new
   end
 
   def show_adj_list
@@ -25,8 +24,16 @@ class Graph
       adj_hash
   end
 
-  def traverse_graph(start_node)
-    queue.enqueue(start_node)
-  end
+  def traverse_graph(starting_node)
+    queue = []
+    visited = []
+    queue << starting_node
+    visited << starting_node
 
+    until queue.empty?
+      current = queue.shift
+      adj_hash[currrent].each { |vertex| queue << vertex }
+    end
+  end
+    
 end
