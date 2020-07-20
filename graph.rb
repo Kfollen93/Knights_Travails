@@ -24,21 +24,27 @@ class Graph
     adj_hash
   end
 
-  def traverse_graph(starting_node, target_node)
-    queue = []
+  def traverse_graph(start, target)
+    queue = [[start]]
     visited = []
-    queue << starting_node
-    visited << starting_node
 
     until queue.empty?
-      current = queue.shift
-      adj_list[current].each do |vertex|
-        unless visited.include?(vertex)
-          queue << vertex
-          visited << vertex
-        end
+      path = queue.shift
+      vertex = path.last
+      return path if vertex == target
+
+      unless visited.include?(vertex)
+
+      adj_list[vertex].each do |current|
+        new_path = Array.new(path)
+        new_path << current
+        return new_path if current == target
+
+        queue << new_path
       end
+      visited << vertex
     end
-    print visited
   end
+end
+
 end

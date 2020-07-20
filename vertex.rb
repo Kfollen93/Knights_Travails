@@ -1,5 +1,5 @@
 class Vertex
-    attr_accessor :coordinates
+    attr_accessor :coordinates, :preceded_by
 
     BOARD_SIZE = 8
 
