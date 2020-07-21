@@ -49,7 +49,7 @@ class Graph
     end
   end
 
-  def valid_move?(start, target)
+  def within_bounds?(start, target)
     start.min >= 0 && target.min >=0 && start.max <= 7 && target.max <= 7
   end
 end
