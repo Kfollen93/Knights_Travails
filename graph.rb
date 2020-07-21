@@ -36,7 +36,7 @@ class Graph
       path = queue.shift
       vertex = path.last
       return path if vertex == target
-      next if visited.include?(vertex)
+      next if visited.include?(vertex) # 'next if' is used as 'unless'
 
       adj_list[vertex].each do |current|
         new_path = Array.new(path)
