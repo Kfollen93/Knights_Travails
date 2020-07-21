@@ -1,13 +1,16 @@
+# frozen_string_literal: true
+
+# Create coordinates for each Vertex.
 class Vertex
-    attr_accessor :coordinates, :preceded_by
+  attr_accessor :coordinates, :preceded_by
 
-    BOARD_SIZE = 8
+  BOARD_SIZE = 8
 
-    def initialize(x, y)
-        @coordinates = [x, y]
-    end
+  def initialize(x, y)
+    @coordinates = [x, y]
+  end
 
-    def to_s
+  def to_s
     (coordinates[0] + 97).chr + (BOARD_SIZE - coordinates[1]).to_s
   end
 end

@@ -1,5 +1,7 @@
-require_relative 'knight'
+# frozen_string_literal: true
 
+require_relative 'knight'
+# Holds methods to display the adjacency list, vertices, and BFS traversal.
 class Graph
   include Knight
 
@@ -20,20 +22,20 @@ class Graph
 
   def hash_moves
     adj_hash = {}
-    (0..7).to_a.repeated_permutation(2).to_a.each { |k| adj_hash[k] = valid_moves(k) }
+    (0..7).to_a.repeated_permutation(2).to_a.each do |k|
+      adj_hash[k] = valid_moves(k)
+    end
     adj_hash
   end
 
   def traverse_graph(start, target)
     queue = [[start]]
     visited = []
-
     until queue.empty?
       path = queue.shift
       vertex = path.last
       return path if vertex == target
-
-      unless visited.include?(vertex)
+      next if visited.include?(vertex)
 
       adj_list[vertex].each do |current|
         new_path = Array.new(path)
@@ -45,6 +47,4 @@ class Graph
       visited << vertex
     end
   end
-end
-
 end

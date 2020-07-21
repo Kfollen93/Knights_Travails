@@ -1,10 +1,14 @@
-module Knight
-  
-  KNIGHT_MOVES = [[2, 1], [1, 2], [-1, 2], [-2, 1],
-                  [-2, -1], [-1, -2], [1, -2], [2, -1]]
+# frozen_string_literal: true
 
-  def valid_moves(location) # Any move that is negative or above 7 would be outside the array (off the board, hence omitted)
-    possible_moves(location).select { |move| move[0].between?(0, Board::MAX) && move[1].between?(0, Board::MAX) }
+# Holds the combination of moves a Knight can make.
+module Knight
+  KNIGHT_MOVES = [[2, 1], [1, 2], [-1, 2], [-2, 1],
+                  [-2, -1], [-1, -2], [1, -2], [2, -1]].freeze
+
+  def valid_moves(location)
+    possible_moves(location).select do |move|
+      move[0].between?(0, Board::MAX) && move[1].between?(0, Board::MAX)
+    end
   end
 
   private
@@ -17,4 +21,3 @@ module Knight
     moves
   end
 end
-

@@ -1,7 +1,8 @@
 # frozen_string_literal: true
+
 require_relative 'graph'
 require_relative 'vertex'
-# Creates 8x8 grid
+# Creates 8x8 grid and displays methods
 class Board
   attr_accessor :graph
 
@@ -22,5 +23,4 @@ class Board
   def display_bfs_graph(start, target)
     graph.traverse_graph(start, target)
   end
-
 end
