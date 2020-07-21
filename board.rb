@@ -20,7 +20,7 @@ class Board
     graph.show_adj_list
   end
 
-  def display_bfs_graph(start, target)
+  def knight_moves(start, target)
     graph.traverse_graph(start, target)
   end
 end

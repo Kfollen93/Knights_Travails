@@ -31,6 +31,7 @@ class Graph
   def traverse_graph(start, target)
     queue = [[start]]
     visited = []
+
     until queue.empty?
       path = queue.shift
       vertex = path.last
