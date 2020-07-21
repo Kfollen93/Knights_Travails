@@ -12,7 +12,7 @@ class Vertex
 
   private
 
-  # Maps letter/number coordinates. Didn't use, but kept for upcoming Chess project.
+  # Maps letter/number coordinates. Didn't use, kept for upcoming Chess project.
   def to_s
     (coordinates[0] + 97).chr + (BOARD_SIZE - coordinates[1]).to_s
   end

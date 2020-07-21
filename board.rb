@@ -22,6 +22,7 @@ class Board
 
   def knight_moves(start, target)
     return warn 'Not a valid move.' unless graph.within_bounds?(start, target)
+
     final_moves = graph.traverse_graph(start, target)
     puts "You made it in #{final_moves.count - 1} moves! Here's your path:"
     final_moves.each { |cords| print "#{cords} \n" }
