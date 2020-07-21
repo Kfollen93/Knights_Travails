@@ -48,4 +48,8 @@ class Graph
       visited << vertex
     end
   end
+
+  def valid_move?(start, target)
+    start.min >= 0 && target.min >=0 && start.max <= 7 && target.max <= 7
+  end
 end
